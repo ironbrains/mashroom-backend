@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'welcome#index'
+  namespace :api do
+    devise_for :users, {
+        singular: :user,
+        controllers: {
+            # passwords: 'devise/passwords',
+            registrations: 'api/users'
+            # sessions: 'devise/sessions'
+        }
+    }
+  end
 end
