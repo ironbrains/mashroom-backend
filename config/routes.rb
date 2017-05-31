@@ -5,8 +5,8 @@ Rails.application.routes.draw do
         singular: :user,
         controllers: {
             # passwords: 'devise/passwords',
-            registrations: 'api/users'
-            # sessions: 'devise/sessions'
+            registrations: 'api/users',
+            sessions: 'api/sessions'
         }
     }
   end
